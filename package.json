@@ -1,0 +1,15 @@
+{
+  "name": "prewebempresarial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preWeb": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
+  }
+}
