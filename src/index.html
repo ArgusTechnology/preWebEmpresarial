@@ -5,40 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web con Navbar Transparente</title>
     <link rel="stylesheet" href="./style/style.css">
-    <style>
-        /* Aquí se agregan clases personalizadas de Tailwind */
-        .bg-opacity-0 {
-            background-color: rgb(232, 19, 19);
-        }
-        .parallax-bg {
-            background-image: url('https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* Animación de desvanecimiento */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 3s forwards;
-        }
-    </style>
+    <link rel="stylesheet" href="./style/css.css">
 </head>
 <body class="bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-teal-600 via-cyan-100 to-blue-950 text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-indigo-400 bg-opacity-5 backdrop-blur-lg shadow-lg transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-sky-600 bg-opacity-100 backdrop-blur-lg shadow-lg transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
@@ -63,9 +35,85 @@
                 <a href="#projects" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 fade-in">Ver Proyectos</a>
             </div>
         </section>
-        <section class="h-screen flex items-center justify-center">
-            <p class="text-2xl">Contenido adicional aquí...</p>
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1" title="Descripción de la Imagen 1">
+                    <div class="carousel-description">Descripción de la Imagen 1</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1" title="Descripción de la Imagen 1">
+                    <div class="carousel-description">Descripción de la Imagen 1</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1" title="Descripción de la Imagen 1">
+                    <div class="carousel-description">Descripción de la Imagen 1</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1" title="Descripción de la Imagen 1">
+                    <div class="carousel-description">Descripción de la Imagen 1</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Descripción de la Imagen 2" title="Descripción de la Imagen 2">
+                    <div class="carousel-description">Descripción de la Imagen 2</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Descripción de la Imagen 3" title="Descripción de la Imagen 3">
+                    <div class="carousel-description">Descripción de la Imagen 3</div>
+                </div>
+                <!-- Añadir más imágenes aquí -->
+            </div>
         </section>
+    
+        <!-- Modal para ver imagen grande -->
+        <div id="modal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+            <div id="modal-caption"></div>
+        </div>
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1">
+                        <div class="carousel-description">Descripción de la Imagen 1</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Descripción de la Imagen 2">
+                        <div class="carousel-description">Descripción de la Imagen 2</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Descripción de la Imagen 3">
+                        <div class="carousel-description">Descripción de la Imagen 3</div>
+                    </div>
+                    <!-- Añadir más imágenes aquí -->
+                    <!-- Duplicar las imágenes para lograr el efecto continuo -->
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/27390962/pexels-photo-27390962/free-photo-of-madera-mar-amanecer-paisaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Descripción de la Imagen 1">
+                        <div class="carousel-description">Descripción de la Imagen 1</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Descripción de la Imagen 2">
+                        <div class="carousel-description">Descripción de la Imagen 2</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Descripción de la Imagen 3">
+                        <div class="carousel-description">Descripción de la Imagen 3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Modal para ver imagen grande -->
+        <div id="modal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+            <div id="modal-caption"></div>
+        </div>
+        
+        
         <!-- Añade más secciones según sea necesario -->
     </main>
 
@@ -77,6 +125,6 @@
     </footer>
 
     <!-- Script para manejar el cambio de transparencia en la navbar -->
-    <script href="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

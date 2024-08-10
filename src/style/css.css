@@ -1,0 +1,171 @@
+/* Aquí se agregan clases personalizadas de Tailwind */
+.bg-opacity-0 {
+    background-color: rgba(237, 237, 237, 0.305);
+}
+.parallax-bg {
+    background-image: url('https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+
+/* CARRUSEL */
+/* styles.css */
+
+/* Estilo del contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    width: 100%;
+    height: 100%;
+    padding: 0 15px; /* Padding para permitir el efecto espejo */
+}
+
+/* Estilo del carrusel */
+.carousel {
+    width: 100%;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+/* Contenedor de los elementos del carrusel */
+.carousel-inner {
+    display: flex;
+    gap: 15px; /* Espaciado entre las imágenes */
+    animation: scroll 30s linear infinite; /* Desplazamiento automático */
+    white-space: nowrap; /* Mantener las imágenes en una sola línea */
+}
+
+/* Estilo de cada ítem del carrusel */
+.carousel-item {
+    display: inline-block; /* Asegura que cada item se alinee horizontalmente */
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Estilo de las imágenes en el carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo de la descripción */
+.carousel-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente que cubre todo el div */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaciado interior */
+    text-align: center;
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave para la opacidad y la escala */
+    transform: scale(0.9); /* Reducir el tamaño ligeramente por defecto */
+}
+
+/* Mostrar la descripción al pasar el cursor */
+.carousel-item:hover .carousel-description {
+    opacity: 1; /* Mostrar la descripción */
+    transform: scale(1); /* Escalar al tamaño completo */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Alto completo de la ventana */
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo de la imagen en el modal */
+.modal-content {
+    width: 80vw; /* Ancho de la imagen ajustable */
+    max-width: 90%; /* Limitar el ancho máximo */
+    height: auto; /* Ajuste automático de la altura */
+    max-height: 80vh; /* Limitar la altura de la imagen */
+    object-fit: contain; /* Ajustar imagen para que se ajuste dentro del modal sin recortes */
+    border-radius: 10px;
+    background: #fff; /* Fondo blanco para la imagen */
+    padding: 20px;
+}
+
+/* Estilo de la X para cerrar el modal */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo del caption en el modal */
+#modal-caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animación de desplazamiento horizontal del carrusel */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Moverse hacia la izquierda hasta la mitad del contenedor */
+    }
+}
+
+/* Estilo para pausar la animación cuando el modal está abierto */
+.modal-open .carousel-inner {
+    animation-play-state: paused; /* Pausar la animación del carrusel */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
