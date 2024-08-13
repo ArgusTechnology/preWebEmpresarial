@@ -23,39 +23,25 @@
 
 // modal carrusel
 
-// script.js
-
-// Manejar la apertura del modal al hacer clic en una imagen
-document.querySelectorAll('.carousel-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const imgSrc = this.querySelector('img').src;
-        const captionText = this.querySelector('.carousel-description').textContent;
-
-        // Mostrar el modal y la imagen
-        document.getElementById('modal').style.display = 'flex';
-        document.getElementById('modal-img').src = imgSrc;
-        document.getElementById('modal-caption').textContent = captionText;
-        
-        // Añadir clase para detener la animación del carrusel
-        document.querySelector('.carousel-container').classList.add('modal-open');
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar Swiper
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, // Cambia el valor para ajustar la velocidad
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
     });
 });
 
-// Cerrar el modal cuando se haga clic en la X
-document.querySelector('.modal-close').addEventListener('click', () => {
-    document.getElementById('modal').style.display = 'none';
 
-    // Quitar la clase para reanudar la animación del carrusel
-    document.querySelector('.carousel-container').classList.remove('modal-open');
-});
 
-// Cerrar el modal cuando se haga clic fuera de la imagen
-window.addEventListener('click', (event) => {
-    if (event.target === document.getElementById('modal')) {
-        document.getElementById('modal').style.display = 'none';
 
-        // Quitar la clase para reanudar la animación del carrusel
-        document.querySelector('.carousel-container').classList.remove('modal-open');
-    }
-});
 
