@@ -30,132 +30,121 @@
 /* CARRUSEL */
 /* styles.css */
 
-/* Estilo del contenedor del carrusel */
+/* Contenedor del carrusel */
 .carousel-container {
     position: relative;
-    overflow: hidden; /* Asegura que el contenido no se desborde */
+    overflow: hidden;
     width: 100%;
-    height: 100%;
-    padding: 0 15px; /* Padding para permitir el efecto espejo */
+    padding: 15px;
+    background: linear-gradient(135deg, #8e9eab 25%, #eef2f3 100%);
 }
 
-/* Estilo del carrusel */
+/* Carrusel */
 .carousel {
-    width: 100%;
-    overflow: hidden; /* Oculta el contenido que se desborda */
-}
-
-/* Contenedor de los elementos del carrusel */
-.carousel-inner {
     display: flex;
-    gap: 15px; /* Espaciado entre las imágenes */
-    animation: scroll 30s linear infinite; /* Desplazamiento automático */
-    white-space: nowrap; /* Mantener las imágenes en una sola línea */
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll 20s linear infinite;
 }
 
 /* Estilo de cada ítem del carrusel */
 .carousel-item {
-    display: inline-block; /* Asegura que cada item se alinee horizontalmente */
-    width: 300px;
-    height: 200px;
-    cursor: pointer;
-    overflow: hidden; /* Ocultar el contenido que se desborda */
-    border-radius: 8px;
+    min-width: 300px;
+    margin: 0 15px;
     position: relative;
 }
 
-/* Estilo de las imágenes en el carrusel */
 .carousel-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-/* Estilo de la descripción */
+/* Descripción */
 .carousel-description {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente que cubre todo el div */
-    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Espaciado interior */
+    padding: 20px;
     text-align: center;
-    opacity: 0; /* Ocultar por defecto */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave para la opacidad y la escala */
-    transform: scale(0.9); /* Reducir el tamaño ligeramente por defecto */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9);
 }
 
-/* Mostrar la descripción al pasar el cursor */
 .carousel-item:hover .carousel-description {
-    opacity: 1; /* Mostrar la descripción */
-    transform: scale(1); /* Escalar al tamaño completo */
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animación de desplazamiento continuo */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Estilo del modal */
 .modal {
-    display: none; /* Ocultar el modal por defecto */
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Ancho completo de la ventana */
-    height: 100vh; /* Alto completo de la ventana */
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
     z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    box-sizing: border-box;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Estilo de la imagen en el modal */
 .modal-content {
-    width: 80vw; /* Ancho de la imagen ajustable */
-    max-width: 90%; /* Limitar el ancho máximo */
-    height: auto; /* Ajuste automático de la altura */
-    max-height: 80vh; /* Limitar la altura de la imagen */
-    object-fit: contain; /* Ajustar imagen para que se ajuste dentro del modal sin recortes */
-    border-radius: 10px;
-    background: #fff; /* Fondo blanco para la imagen */
-    padding: 20px;
+    margin: auto;
+    display: block;
+    max-width: 80%;
 }
 
-/* Estilo de la X para cerrar el modal */
+.modal-caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
 .modal-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #fff;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
     cursor: pointer;
 }
 
-/* Estilo del caption en el modal */
-#modal-caption {
-    color: #fff;
-    text-align: center;
-    margin-top: 10px;
-}
 
-/* Animación de desplazamiento horizontal del carrusel */
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%); /* Moverse hacia la izquierda hasta la mitad del contenedor */
-    }
-}
 
-/* Estilo para pausar la animación cuando el modal está abierto */
-.modal-open .carousel-inner {
-    animation-play-state: paused; /* Pausar la animación del carrusel */
-}
+
+
 
 
 
