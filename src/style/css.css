@@ -1,9 +1,9 @@
 /* Aquí se agregan clases personalizadas de Tailwind */
 .bg-opacity-0 {
-    background-color: rgba(237, 237, 237, 0.305);
+    background-color: rgba(159, 154, 154, 0.186);
 }
 .parallax-bg {
-    background-image: url('https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
+    background-image: url('https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,20 +38,25 @@
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     width: 100%; /* Ajusta el ancho del swiper-slide al 100% */
     height: auto; /* Permite que la altura se ajuste automáticamente */
+
+    
 }
 
 /* Estilos para el contenedor de la imagen */
 .swiper-slide > div {
     position: relative;
-    border: 2px solid #4a5568; /* Borde más delgado */
-    border-radius: 8px; /* Bordes redondeados más sutiles */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border: 3px solid rgba(178, 208, 196, 0.638); /* Borde más delgado */
+    border-radius: 10px; /* Bordes redondeados más sutiles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Sombra sutil */
     overflow: hidden; /* Asegura que el borde y la sombra no se salgan del contenedor */
     width: 100%; /* Ajusta el ancho del contenedor al 100% del swiper-slide */
     max-width: 400px; /* Ancho máximo del contenedor */
     height: 300px; /* Altura del contenedor */
     margin: auto; /* Centra horizontalmente el contenedor */
     background-color: transparent; /* Fondo transparente para el contenedor */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutilmente claro */
+    transition: transform 0.3s, box-shadow 0.3s;
+    
 }
 
 /* Estilos para la imagen dentro del contenedor */
@@ -60,6 +65,7 @@
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
     object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    
 }
 
 /* Estilos para la descripción del carrusel */
@@ -69,7 +75,7 @@
     left: 0; /* Empieza desde la parte izquierda */
     width: 100%; /* Ocupa todo el ancho del contenedor */
     height: 100%; /* Ocupa toda la altura del contenedor */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con mayor opacidad */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor opacidad */
     color: white;
     font-size: 1.25rem;
     font-weight: bold;
@@ -77,11 +83,13 @@
     display: flex; /* Usar flexbox para centrar la descripción */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    padding: 10px;
+    padding: 12px;
     box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento */
     transition: opacity 0.5s ease;
     opacity: 0; /* Inicialmente invisible */
     z-index: 10; /* Asegura que la descripción esté encima de la imagen */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Mostrar la descripción al pasar el ratón */
@@ -97,6 +105,7 @@ section {
 section + section {
     margin-top: 2rem; /* Espaciado entre secciones */
 }
+
 
 
 
