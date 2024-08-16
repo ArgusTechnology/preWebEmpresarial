@@ -3,7 +3,7 @@
     background-color: rgba(159, 154, 154, 0.186);
 }
 .parallax-bg {
-    background-image: url('https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
+    background-image: url('https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
