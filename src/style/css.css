@@ -5,6 +5,7 @@
 .parallax-bg {
     background-image: url("../images/imagen1.jpeg"); /* Cambia la URL a tu imagen */
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
@@ -64,7 +65,7 @@
     position: relative; /* Necesario para el posicionamiento de la descripción */
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     width: 100%; /* Ajusta el ancho del swiper-slide al 100% */
-    height: 500px; /* Permite que la altura se ajuste automáticamente */
+    height: 450px; /* Permite que la altura se ajuste automáticamente */
     box-shadow: 12px 8px 0px rgba(49, 55, 82, 0.903), /* Sombra más difusa */
     12px 8px 0px rgba(44, 67, 103, 0.936); /* Sombra más suave */
     border-radius: 10px;
@@ -141,7 +142,70 @@ section + section {
   }
 
 
+ /* css de los integrantes*/
 
+  .spacer {
+    height: 100%; /* Simula contenido antes y después del contenedor de concursantes */
+  }
+  
+  .contestants-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    
+    
+  }
+  
+  .contestant {    
+    
+    text-align: justify;
+    
+    border-radius: 1rem;
+    font-size: 1rem;
+    color:white;
+    background-color: rgba(9, 46, 74, 0.213);
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* Espaciado entre concursantes */
+    opacity: 0.8;
+    transition: opacity 5s ease, transform 3s ease; /* Transición más lenta */
+  }
+  
+  .contestant img {
+    width: 210px;  /* Tamaño ajustado */
+    height: 250px; /* Tamaño ajustado */
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+
+  .description{
+    padding-left: 10px;
+    padding-right: 50px;
+  }
+  
+  .contestant.left {
+    transform: translateX(-150%); /* Posición inicial fuera de vista */
+  }
+  
+  .contestant.right {
+    transform: translateX(150%); /* Posición inicial fuera de vista */
+    flex-direction: row-reverse; /* Invierte el orden de la imagen y la descripción */
+  }
+  
+  .contestant.show {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+  
+  .contestant.hide.left {
+    opacity: 0.2;
+    transform: translateX(-150%); /* Desliza hacia la izquierda mientras se desvanece */
+  }
+  
+  .contestant.hide.right {
+    opacity: 0.3;
+    transform: translateX(150%); /* Desliza hacia la derecha mientras se desvanece */
+  }
+  
 
 
 
