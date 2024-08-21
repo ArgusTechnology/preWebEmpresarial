@@ -30,7 +30,8 @@
 /* titulo de section 2 */
 
 .proyectos-empresa {
-    padding: 20px; /* Reduce el padding general */
+    
+    padding-bottom: 50px; /* Reduce el padding general */
     text-align: center; /* Centra el texto horizontalmente */
     background-color: #f5f5f500; /* Color de fondo simple */
     overflow: hidden; /* Asegura que el contenido no se desborde */
@@ -63,34 +64,35 @@
     position: relative; /* Necesario para el posicionamiento de la descripción */
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     width: 100%; /* Ajusta el ancho del swiper-slide al 100% */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-
+    height: 500px; /* Permite que la altura se ajuste automáticamente */
+    box-shadow: 12px 8px 0px rgba(49, 55, 82, 0.903), /* Sombra más difusa */
+    12px 8px 0px rgba(44, 67, 103, 0.936); /* Sombra más suave */
+    border-radius: 10px;
     
 }
 
 /* Estilos para el contenedor de la imagen */
 .swiper-slide > div {
     position: relative;
-    border: 3px solid rgba(178, 208, 196, 0.638); /* Borde más delgado */
-    border-radius: 10px; /* Bordes redondeados más sutiles */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Sombra sutil */
+     /* Bordes redondeados más sutiles */
     overflow: hidden; /* Asegura que el borde y la sombra no se salgan del contenedor */
     width: 100%; /* Ajusta el ancho del contenedor al 100% del swiper-slide */
-    max-width: 400px; /* Ancho máximo del contenedor */
-    height: 300px; /* Altura del contenedor */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    height: 100%; /* Altura del contenedor */
     margin: auto; /* Centra horizontalmente el contenedor */
-    background-color: transparent; /* Fondo transparente para el contenedor */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutilmente claro */
-    transition: transform 0.3s, box-shadow 0.3s;
+    
+    
     
 }
 
 /* Estilos para la imagen dentro del contenedor */
 .swiper-slide img {
+   
     display: block; /* Elimina el espacio debajo de la imagen */
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
     object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    border-radius: 10px;
     
 }
 
@@ -109,13 +111,15 @@
     display: flex; /* Usar flexbox para centrar la descripción */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    padding: 12px;
+    padding: 10px;
     box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento */
     transition: opacity 0.5s ease;
     opacity: 0; /* Inicialmente invisible */
     z-index: 10; /* Asegura que la descripción esté encima de la imagen */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    
+   
 }
 
 /* Mostrar la descripción al pasar el ratón */
@@ -132,7 +136,9 @@ section + section {
     margin-top: 2rem; /* Espaciado entre secciones */
 }
 
-
+.swiper-pagination-bullet {
+    background-color: #fae5e1; /* Cambia este color por el que desees */
+  }
 
 
 
