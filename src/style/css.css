@@ -3,7 +3,7 @@
     background-color: rgba(159, 154, 154, 0.186);
 }
 .parallax-bg {
-    background-image: url('https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Cambia la URL a tu imagen */
+    background-image: url("../images/imagen1.jpeg"); /* Cambia la URL a tu imagen */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -24,6 +24,32 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 3s forwards;
+}
+
+
+/* titulo de section 2 */
+
+.proyectos-empresa {
+    padding: 20px; /* Reduce el padding general */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #f5f5f500; /* Color de fondo simple */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.animate-text {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem; /* Tamaño del texto aumentado */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(30, end) forwards;
+    margin: 0; /* Elimina márgenes externos que podrían estar causando el recorte */
+    padding: 0; /* Elimina el padding interno que podría estar afectando el tamaño del contenedor */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Termina al final del texto */
 }
 
 
