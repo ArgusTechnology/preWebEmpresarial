@@ -207,7 +207,24 @@ section + section {
   
 
 
+ /* Estilo de animación para el efecto de zoom */
+ .card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Estilo de tarjeta flotante */
+.card {
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1f2937; /* Fondo oscuro para las tarjetas */
+}
+
+.card img{
+  border-radius: 15px;
+  mask-image: linear-gradient(rgba(235, 233, 233, 0.777) 90%, transparent);
+}
 
 
 
