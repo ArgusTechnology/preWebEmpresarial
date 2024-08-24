@@ -101,4 +101,21 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+  //formulario de contacto
+
+  function sendEmail() {
+    // Obtener los valores del formulario
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Construir el enlace mailto con los valores del formulario
+    const subject = encodeURIComponent(`Contacto desde el sitio web de ${name}`);
+    const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\nMensaje:\n${message}`);
+    const mailtoLink = `mailto:marcohinostroza765@gmail.com?subject=${subject}&body=${body}`;
+
+    // Abrir el cliente de correo electrónico
+    window.location.href = mailtoLink;
+}
+
 

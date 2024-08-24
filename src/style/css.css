@@ -92,7 +92,7 @@
     display: block; /* Elimina el espacio debajo de la imagen */
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+     /* Asegura que la imagen se ajuste sin distorsionarse */
     border-radius: 10px;
     
 }
@@ -141,94 +141,55 @@ section + section {
     background-color: #fae5e1; /* Cambia este color por el que desees */
   }
 
-
- /* css de los integrantes*/
-
-  .spacer {
-    height: 100%; /* Simula contenido antes y después del contenedor de concursantes */
-  }
-  
-  .contestants-wrapper {
-    width: 50%;
-    margin: 0 auto;
-    
-    
-  }
-  
-  .contestant {    
-    
-    text-align: justify;
-    border-radius: 1rem;
-    font-size: 1rem;
-    color:white;
-    background-color: rgba(9, 46, 74, 0.213);
-    display: flex;
-    align-items: center;
-    margin: 20px 0; /* Espaciado entre concursantes */
-    opacity: 0.8;
-    transition: opacity 5s ease, transform 3s ease; /* Transición más lenta */
-  }
-  
-  .contestant img {
-    width: 210px;  /* Tamaño ajustado */
-    height: 250px; /* Tamaño ajustado */
-    margin-right: 20px;
-    border-radius: 20px;
-  }
-
-  .description{
-    padding-left: 10px;
-    padding-right: 50px;
-  }
-  
-  .contestant.left {
-    transform: translateX(-150%); /* Posición inicial fuera de vista */
-  }
-  
-  .contestant.right {
-    transform: translateX(150%); /* Posición inicial fuera de vista */
-    flex-direction: row-reverse; /* Invierte el orden de la imagen y la descripción */
-  }
-  
-  .contestant.show {
-    opacity: 0.8;
-    transform: translateX(0);
-  }
-  
-  .contestant.hide.left {
-    opacity: 0.2;
-    transform: translateX(-150%); /* Desliza hacia la izquierda mientras se desvanece */
-  }
-  
-  .contestant.hide.right {
-    opacity: 0.3;
-    transform: translateX(150%); /* Desliza hacia la derecha mientras se desvanece */
-  }
   
 
+/* tarjetas de los integrantes */
 
- /* Estilo de animación para el efecto de zoom */
- .card:hover {
+.card:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo de tarjeta flotante */
+/* Transición suave para el efecto */
 .card {
-  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: #1f2937; /* Fondo oscuro para las tarjetas */
+
 }
 
-.card img{
-  border-radius: 15px;
-  mask-image: linear-gradient(rgba(235, 233, 233, 0.777) 90%, transparent);
+/* diseño de contacto */
+
+.contact-section {
+  background: linear-gradient(to right, #2b2d2f, #4a4a4a);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-out;
 }
-
-
-
-
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.contact-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4a90e2;
+}
+.contact-button {
+  background: #4a90e2;
+  color: #fff;
+  transition: background 0.3s, transform 0.3s;
+}
+.contact-button:hover {
+  background: #357abd;
+  transform: scale(1.05);
+}
 
 
 
