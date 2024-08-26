@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Construir el enlace mailto con los valores del formulario
     const subject = encodeURIComponent(`Contacto desde el sitio web de ${name}`);
     const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\nMensaje:\n${message}`);
-    const mailtoLink = `mailto:marcohinostroza765@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:argus.technologyit@gmail.com?subject=${subject}&body=${body}`;
 
     // Abrir el cliente de correo electrónico
     window.location.href = mailtoLink;

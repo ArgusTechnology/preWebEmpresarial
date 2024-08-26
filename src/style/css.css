@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Aquí se agregan clases personalizadas de Tailwind */
 .bg-opacity-0 {
     background-color: rgba(159, 154, 154, 0.186);
@@ -8,6 +11,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+#navbar{
+    font-size: 17px;
+    font-weight: bold;
 }
 
 /* Animación de desvanecimiento */
@@ -88,7 +96,6 @@
 
 /* Estilos para la imagen dentro del contenedor */
 .swiper-slide img {
-   
     display: block; /* Elimina el espacio debajo de la imagen */
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
