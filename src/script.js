@@ -118,5 +118,42 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = mailtoLink;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav a");
 
+    for (const link of links) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Ajusta el -70 si es necesario para compensar la altura del navbar
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
+});
+
+
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar el botón "Ver Proyectos"
+    const projectsButton = document.querySelector('a[href="#proyectos"]');
+
+    // Agregar un listener al botón
+    projectsButton.addEventListener('click', function(event) {
+        // Prevenir el comportamiento predeterminado del enlace
+        event.preventDefault();
+
+        // Seleccionar la sección de proyectos
+        const projectsSection = document.querySelector('#proyectos');
+
+        // Desplazarse suavemente a la sección de proyectos
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 
