@@ -157,3 +157,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+//desplazamiento de los links del footer
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav a");
+
+    for (const link of links) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Ajusta el -70 si es necesario para compensar la altura del navbar
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
+});
+
