@@ -21,15 +21,109 @@
             elements.forEach(el => observer.observe(el));
         });
 
+
+        //animacion del titulo de section 2
+
+// Texto animado bajo el título "Proyectos Destacados"
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializa Swiper solo para dispositivos móviles
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Función para ajustar la visibilidad según el tamaño de la pantalla
+    function adjustVisibility() {
+        const screenWidth = window.innerWidth;
+        const mobileBreakpoint = 768; // Define el punto de ruptura para móviles
+
+        if (screenWidth < mobileBreakpoint) {
+            // Móvil: Mostrar carrusel y ocultar diseño en cuadrícula
+            document.querySelector('.swiper-container').style.display = 'block';
+            document.getElementById('grid-images').style.display = 'none';
+        } else {
+            // Pantalla grande: Mostrar diseño en cuadrícula y ocultar carrusel
+            document.querySelector('.swiper-container').style.display = 'none';
+            document.getElementById('grid-images').style.display = 'flex';
+        }
+    }
+
+    // Ajusta la visibilidad al cargar la página
+    adjustVisibility();
+
+    // Ajusta la visibilidad al redimensionar la ventana
+    window.addEventListener('resize', adjustVisibility);
+
+});
+
+        // Esperar a que el DOM esté completamente cargado
+ // Seleccionar el botón "Ver Proyectos"
+ const projectsButton = document.querySelector('a[href="#proyectos"]');
+
+ // Agregar un listener al botón
+ projectsButton.addEventListener('click', function(event) {
+     // Prevenir el comportamiento predeterminado del enlace
+     event.preventDefault();
+
+     // Seleccionar la sección de proyectos
+     const projectsSection = document.querySelector('#proyectos');
+
+     // Desplazarse suavemente a la sección de proyectos
+     projectsSection.scrollIntoView({ behavior: 'smooth' });
+ });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav a");
+        
+            for (const link of links) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    const targetId = this.getAttribute("href");
+                    const targetSection = document.querySelector(targetId);
+        
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70, // Ajusta el -70 si es necesario para compensar la altura del navbar
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+        });
+
+
+        
+
 //js del nuevo slider
 
 const images = [
-    "https://i.ibb.co/qCkd9jS/img1.jpg",
-    "https://i.ibb.co/jrRb11q/img2.jpg",
-    "https://i.ibb.co/NSwVv8D/img3.jpg",
-    "https://i.ibb.co/Bq4Q0M8/img4.jpg",
-    "https://i.ibb.co/jTQfmTq/img5.jpg",
-    "https://i.ibb.co/RNkk6L0/img6.jpg"
+    "./images/projects/restaurantfoodfunday.png",
+    "./images/projects/cafebaristas.png",
+    "./images/projects/storeclothes.png",
+    "./images/projects/hotelnice.png",
+    "./images/projects/caferestaurant.png",
+    "./images/projects/cochetaller.png",
+    "./images/projects/kaffacoffegreen.png"
+
 ];
 
 const backgroundDiv = document.getElementById('background');
@@ -41,6 +135,7 @@ function changeBackground() {
     backgroundDiv.classList.add('fade-out');
     setTimeout(() => {
         backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
+        console.log(backgroundDiv);
         backgroundDiv.classList.remove('fade-out');
         backgroundDiv.classList.add('fade-in');
         currentIndex = (currentIndex + 1) % images.length;
@@ -54,7 +149,7 @@ function changeBackground() {
 backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
 
 // Change background image every 6 seconds
-setInterval(changeBackground, 6000);
+
 
 // Change background image when a thumbnail is clicked
 thumbnails.forEach((thumbnail, index) => {
@@ -74,84 +169,9 @@ thumbnails.forEach((thumbnail, index) => {
 
 
 
-/* modal carrusel
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar Swiper
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000, // Cambia el valor para ajustar la velocidad
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        slidesPerView: 3,
-        spaceBetween: 30,
-        centeredSlides: true,
-    });
-});
-
-*/
-//animacion del titulo de section 2
-
-const textElement = document.querySelector('.animate-text');
-const texts = [
-    "Proyectos impulsados por pasión y dedicación...",
-    "Juntos, damos vida a tus ideas con soluciones innovadoras..."
-];
-
-let index = 0;
-
-function typeText() {
-    textElement.textContent = texts[index];
-    textElement.style.width = '0'; // Resetea la animación
-    textElement.style.animation = 'none'; // Detiene la animación
-    setTimeout(() => {
-        textElement.style.animation = ''; // Reactiva la animación
-    }, 10);
-    index = (index + 1) % texts.length; // Cambia al siguiente texto
-}
-
-setInterval(typeText, 6000); // Cambia el texto cada 5 segundos
-
-// Inicializa con el primer texto
-typeText();
 
 
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const contestants = document.querySelectorAll('.contestant');
-  
-    function checkVisibility() {
-        const windowHeight = window.innerHeight;
-  
-        contestants.forEach((contestant, index) => {
-            const rect = contestant.getBoundingClientRect();
-  
-            if (rect.top < windowHeight && rect.bottom > 0) {
-                // Mostrar concursante si está en la vista
-                setTimeout(() => {
-                    contestant.classList.add('show');
-                    contestant.classList.remove('hide');
-                }, index * 200); // Retardo entre la aparición de cada concursante
-            } else {
-                // Ocultar concursante si no está en la vista
-                setTimeout(() => {
-                    contestant.classList.add('hide');
-                    contestant.classList.remove('show');
-                }, index * 200); // Ocultar en orden
-            }
-        });
-    }
-  
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Verificar la visibilidad al cargar la página
-  });
 
 
   //formulario de contacto
@@ -171,66 +191,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = mailtoLink;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("nav a");
-
-    for (const link of links) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Ajusta el -70 si es necesario para compensar la altura del navbar
-                    behavior: "smooth"
-                });
-            }
-        });
-    }
-});
-
-
-// Esperar a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleccionar el botón "Ver Proyectos"
-    const projectsButton = document.querySelector('a[href="#proyectos"]');
-
-    // Agregar un listener al botón
-    projectsButton.addEventListener('click', function(event) {
-        // Prevenir el comportamiento predeterminado del enlace
-        event.preventDefault();
-
-        // Seleccionar la sección de proyectos
-        const projectsSection = document.querySelector('#proyectos');
-
-        // Desplazarse suavemente a la sección de proyectos
-        projectsSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-
-//desplazamiento de los links del footer
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("nav a");
-
-    for (const link of links) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Ajusta el -70 si es necesario para compensar la altura del navbar
-                    behavior: "smooth"
-                });
-            }
-        });
-    }
-});
 
 
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import 'https://unpkg.com/swiper/swiper-bundle.min.css';
 body{
     overflow-x: hidden;
 }
@@ -211,7 +211,7 @@ section + section {
 /* nuevo slider para la web */
 
 #background {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1ms ease-in-out;
 }
 
 .fade-out {

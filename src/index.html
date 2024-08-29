@@ -37,7 +37,7 @@
         </div>
     
         <!-- Menú desplegable móvil -->
-        <div id="mobile-menu" class="md:hidden hidden bg-blue-600 bg-opacity-90 backdrop-blur-lg shadow-lg">
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-0 bg-opacity-90 backdrop-blur-lg shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#inicio" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
                 <a href="#servicios" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Servicios</a>
@@ -57,19 +57,67 @@
             </div>
         </section>
 
-        <section class="relative w-screen h-screen flex items-center justify-center">
-            <div id="background" class="w-3/4 h-3/4 bg-cover bg-center transition-opacity duration-1000 flex items-center justify-center">
-                <h1 class="text-4xl font-bold text-white absolute top-4">Proyectos Destacados</h1>
+        <section id="proyectos" class="relative w-screen h-screen flex flex-col items-center justify-center bg-gray-800">
+            <div id="background" class="absolute w-full h-full bg-cover  transition-opacity duration-1000 flex items-center justify-center">
+                <!-- Aquí puedes agregar contenido para el fondo si es necesario -->
             </div>
-            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
-                
+            <div class="absolute left-4 sm:left-8 md:left-16 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
-                    <img src="https://i.ibb.co/qCkd9jS/img1.jpg" alt="Switzerland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
-                    <img src="https://i.ibb.co/jrRb11q/img2.jpg" alt="Finland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
-                    <img src="https://i.ibb.co/NSwVv8D/img3.jpg" alt="Iceland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
-                    <img src="https://i.ibb.co/Bq4Q0M8/img4.jpg" alt="Australia" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
-                    <img src="https://i.ibb.co/jTQfmTq/img5.jpg" alt="Netherlands" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
-                    <img src="https://i.ibb.co/RNkk6L0/img6.jpg" alt="Ireland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <!-- Las imágenes se ajustan según el tamaño de la pantalla -->
+                    <img src="./images/projects/restaurantfoodfunday.png" alt="Restaurant Food" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/cafebaristas.png" alt="Cafe Baristas" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/storeclothes.png" alt="Store Clothes" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/hotelnice.png" alt="Hotel Nice" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/caferestaurant.png" alt="Cafe Restaurant" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/cochetaller.png" alt="Coche Taller" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    <img src="./images/projects/kaffacoffegreen.png" alt="Kaffa Coffee Green" class="thumbnail cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                </div>
+            </div>
+            <!-- Carrusel para dispositivos móviles -->
+            <div class="hidden w-full h-full relative flex items-center justify-center">
+                <!-- Carrusel para dispositivos móviles -->
+                <div class="swiper-container md:hidden w-full h-full">
+                    <div class="swiper-wrapper">
+                        <!-- Cada imagen es un slide en el carrusel -->
+                        <div class="swiper-slide">
+                            <img src="./images/projects/restaurantfoodfunday.png" alt="Restaurant Food" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/cafebaristas.png" alt="Cafe Baristas" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/storeclothes.png" alt="Store Clothes" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/hotelnice.png" alt="Hotel Nice" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/caferestaurant.png" alt="Cafe Restaurant" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/cochetaller.png" alt="Coche Taller" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/projects/kaffacoffegreen.png" alt="Kaffa Coffee Green" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+        
+                <!-- Diseño en cuadrícula para pantallas grandes -->
+                <div id="grid-images" class="hidden md:flex flex-col gap-4 absolute top-1/2 transform -translate-y-1/2 left-4 sm:left-8 md:left-16">
+                    <div class="flex flex-col gap-2">
+                        <img src="./images/projects/restaurantfoodfunday.png" alt="Restaurant Food" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/cafebaristas.png" alt="Cafe Baristas" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/storeclothes.png" alt="Store Clothes" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/hotelnice.png" alt="Hotel Nice" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/caferestaurant.png" alt="Cafe Restaurant" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/cochetaller.png" alt="Coche Taller" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                        <img src="./images/projects/kaffacoffegreen.png" alt="Kaffa Coffee Green" class="cursor-pointer w-full sm:w-24 h-auto object-cover border-2 border-transparent hover:border-white">
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,7 +350,8 @@
     
 
     <!-- Script para manejar el cambio de transparencia en la navbar -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 </body>
 </html>
