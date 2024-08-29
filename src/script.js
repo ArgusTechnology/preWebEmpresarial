@@ -21,7 +21,60 @@
             elements.forEach(el => observer.observe(el));
         });
 
-// modal carrusel
+//js del nuevo slider
+
+const images = [
+    "https://i.ibb.co/qCkd9jS/img1.jpg",
+    "https://i.ibb.co/jrRb11q/img2.jpg",
+    "https://i.ibb.co/NSwVv8D/img3.jpg",
+    "https://i.ibb.co/Bq4Q0M8/img4.jpg",
+    "https://i.ibb.co/jTQfmTq/img5.jpg",
+    "https://i.ibb.co/RNkk6L0/img6.jpg"
+];
+
+const backgroundDiv = document.getElementById('background');
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+let currentIndex = 0;
+
+function changeBackground() {
+    backgroundDiv.classList.add('fade-out');
+    setTimeout(() => {
+        backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
+        backgroundDiv.classList.remove('fade-out');
+        backgroundDiv.classList.add('fade-in');
+        currentIndex = (currentIndex + 1) % images.length;
+        setTimeout(() => {
+            backgroundDiv.classList.remove('fade-in');
+        }, 1000); // Match the duration with CSS transition
+    }, 1000); // Match the duration with CSS transition
+}
+
+// Set initial background
+backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
+
+// Change background image every 6 seconds
+setInterval(changeBackground, 6000);
+
+// Change background image when a thumbnail is clicked
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        backgroundDiv.classList.add('fade-out');
+        setTimeout(() => {
+            backgroundDiv.style.backgroundImage = `url(${images[index]})`;
+            backgroundDiv.classList.remove('fade-out');
+            backgroundDiv.classList.add('fade-in');
+            currentIndex = index; // Update current index to match clicked thumbnail
+            setTimeout(() => {
+                backgroundDiv.classList.remove('fade-in');
+            }, 1000); // Match the duration with CSS transition
+        }, 1000); // Match the duration with CSS transition
+    });
+});
+
+
+
+/* modal carrusel
 
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializar Swiper
@@ -41,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+*/
 //animacion del titulo de section 2
 
 const textElement = document.querySelector('.animate-text');
@@ -178,4 +231,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+
+
 

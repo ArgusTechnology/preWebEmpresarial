@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
 <body class="bg-gradient-to-tr from-slate-900 to-zinc-900 text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed f py-4 top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
@@ -24,82 +25,56 @@
                     <a href="#nosotros" class="text-white hover:text-amber-300">Nosotros</a>
                     <a href="#contacto" class="text-white hover:text-amber-300">Contacto</a>
                 </div>
+                <!-- Botón de menú móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-white hover:text-amber-300 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-600 bg-opacity-90 backdrop-blur-lg shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                <a href="#servicios" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Servicios</a>
+                <a href="#nosotros" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
+                <a href="#contacto" class="text-white hover:text-amber-300 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
             </div>
         </div>
     </nav>
-
+    
     <!-- Contenido principal -->
     <main>
         <section id="inicio" class="relative h-screen flex items-center justify-center parallax-bg">
             <div class="relative z-10 text-center px-4 md:px-8">
-                <h1 id="hero-title" class="text-5xl font-bold mb-4 fade-in">Innovamos el Futuro de la Tecnología</h1>
-                <p id="hero-description" class="text-lg fade-in">Descubre nuestros proyectos y soluciones tecnológicas avanzadas.</p>
+                <h1 id="hero-title" class="text-5xl font-bold mb-4 fade-in text-white">Innovamos el Futuro de la Tecnología</h1>
+                <p id="hero-description" class="text-lg fade-in text-white">Descubre nuestros proyectos y soluciones tecnológicas avanzadas.</p>
                 <a href="#proyectos" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 fade-in">Ver Proyectos</a>
             </div>
         </section>
 
-        <section id="proyectos" class="py-24 h-screen px-2 relative">
-            <div class="swiper centered-slide-carousel swiper-container px-4">
-                <div class="proyectos-empresa">
-                    <h1 class="animate-text"></h1>
-                </div>
-                <div class="swiper-wrapper pb-10">
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/kaffacoffegreen.png" alt="Slide 1">
-                            <div class="carousel-description">Un sitio web elegante y ecológico para una cafetería sostenible, con e-commerce y una sección para conocer el origen del café.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/restaurantfoodfunday.png" alt="Slide 2">
-                            <div class="carousel-description">Una web vibrante y colorida que resalta las ofertas del restaurante y facilita las reservas en línea con una experiencia de usuario dinámica.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/hotelnice.png" alt="Slide 3">
-                            <div class="carousel-description">Un sitio web boutique que destaca el lujo y confort del hotel, con galerías visuales y un sistema de reservas intuitivo.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/caferestaurant.png" alt="Slide 2">
-                            <div class="carousel-description">Un diseño cálido y acogedor que combina restaurante y cafetería, con reservas de mesas y un blog de novedades.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/cochetaller.png" alt="Slide 2">
-                            <div class="carousel-description">Una web robusta para un taller de coches, enfocada en la confianza y profesionalidad, con citas en línea y testimonios de clientes.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/cafebaristas.png" alt="Slide 2">
-                            <div class="carousel-description">Un sitio contemporáneo para baristas, con e-commerce de café y cursos de barismo, ideal para los amantes del café.</div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-container">
-                            <img src="./images/projects/storeclothes.png" alt="Slide 2">
-                            <div class="carousel-description">Una tienda online de moda con un diseño elegante, optimizado para una compra fluida con un carrito inteligente y recomendaciones personalizadas.</div>
-                        </div>
-                    </div>
-                    <!-- Añadir más swiper-slide aquí -->
-                </div>
-                <div class="swiper-pagination"></div>
-                
+        <section class="relative w-screen h-screen flex items-center justify-center">
+            <div id="background" class="w-3/4 h-3/4 bg-cover bg-center transition-opacity duration-1000 flex items-center justify-center">
+                <h1 class="text-4xl font-bold text-white absolute top-4">Proyectos Destacados</h1>
             </div>
-            <div class="py-10 px-20">
+            <div class="absolute left-16 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
                 
-                <p class="text-white leading-relaxed text-center">
-                    Nuestras páginas web están diseñadas a medida, reflejando tus necesidades y preferencias. En ARGUS, combinamos un diseño atractivo con tecnología avanzada para crear sitios web que no solo impresionan, sino que también funcionan perfectamente en cualquier dispositivo. Nos enfocamos en brindarte una herramienta poderosa que conecte con tu audiencia, fortalezca tu marca y te ayude a alcanzar tus metas en el entorno digital.
-                </p>
+                <div class="flex flex-col gap-2">
+                    <img src="https://i.ibb.co/qCkd9jS/img1.jpg" alt="Switzerland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <img src="https://i.ibb.co/jrRb11q/img2.jpg" alt="Finland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <img src="https://i.ibb.co/NSwVv8D/img3.jpg" alt="Iceland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <img src="https://i.ibb.co/Bq4Q0M8/img4.jpg" alt="Australia" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <img src="https://i.ibb.co/jTQfmTq/img5.jpg" alt="Netherlands" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                    <img src="https://i.ibb.co/RNkk6L0/img6.jpg" alt="Ireland" class="thumbnail cursor-pointer w-24 h-16 object-cover border-2 border-transparent hover:border-white">
+                </div>
             </div>
         </section>
-        <!-- Añade más secciones según sea necesario -->
-        <section id="servicios" class="pb-24 pt-28 ">
+        <!-- Sección de servicios -->
+        <section id="servicios" class="pb-24 pt-28 bg-gray-900">
             <div class="max-w-7xl mx-auto px-6 pb-12 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-extrabold text-white border-b-4 border-teal-100 inline-block pb-2">Servicios Argus</h2>
@@ -108,33 +83,33 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Servicio 1 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Consultoría Tecnológica</h3>
-                    <p class="text-gray-600">Asesoramos a empresas en la selección e implementación de tecnologías avanzadas para optimizar sus operaciones.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Consultoría Tecnológica</h3>
+                        <p class="text-gray-600">Asesoramos a empresas en la selección e implementación de tecnologías avanzadas para optimizar sus operaciones.</p>
                     </div>
                     <!-- Servicio 2 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Software a Medida</h3>
-                    <p class="text-gray-600">Creamos soluciones de software personalizadas que garantizan funcionalidad, eficiencia y escalabilidad.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Software a Medida</h3>
+                        <p class="text-gray-600">Creamos soluciones de software personalizadas que garantizan funcionalidad, eficiencia y escalabilidad.</p>
                     </div>
                     <!-- Servicio 3 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Páginas Web</h3>
-                    <p class="text-gray-600">Facilitamos la integración de plataformas y sistemas, mejorando la comunicación y el flujo de información.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Páginas Web</h3>
+                        <p class="text-gray-600">Facilitamos la integración de plataformas y sistemas, mejorando la comunicación y el flujo de información.</p>
                     </div>
                     <!-- Servicio 4 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de ERPs para empresas</h3>
-                    <p class="text-gray-600">Proveemos servicios de ciberseguridad para proteger la información crítica contra amenazas internas y externas.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de ERPs para empresas</h3>
+                        <p class="text-gray-600">Proveemos servicios de ciberseguridad avanzada para proteger la información crítica de tu empresa.</p>
                     </div>
                     <!-- Servicio 5 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Servicios en la Nube</h3>
-                    <p class="text-gray-600">Ofrecemos soluciones de computación en la nube, incluyendo migración, gestión y optimización de recursos.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Consultoría de Proyectos Tecnológicos</h3>
+                        <p class="text-gray-600">Analizamos y gestionamos tus proyectos tecnológicos para garantizar el éxito en cada etapa del desarrollo.</p>
                     </div>
                     <!-- Servicio 6 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Soporte Técnico y Mantenimiento</h3>
-                    <p class="text-gray-600">Brindamos soporte continuo y mantenimiento de sistemas para garantizar un funcionamiento óptimo a largo plazo.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Implementación de Soluciones Cloud</h3>
+                        <p class="text-gray-600">Ofrecemos migración y administración de servicios en la nube para mejorar la eficiencia y escalabilidad de tu empresa.</p>
                     </div>
                 </div>
             </div>
@@ -148,7 +123,7 @@
                 <p>En ARGUS, nos dedicamos a desarrollar soluciones tecnológicas innovadoras que transforman la forma en que las empresas operan en el entorno digital. Nuestro equipo multidisciplinario combina experiencia técnica con creatividad para brindar productos y servicios que exceden las expectativas de nuestros clientes. Valoramos la innovación, la calidad y el trabajo en equipo, y creemos que juntos podemos hacer grandes cosas.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                <!-- Tarjeta 1 -->
+                
                 <div class="card bg-gray-800 rounded-lg p-5">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre CEO">
                     <h2 class="text-center text-xl font-bold mt-4">Marco Hinostroza</h2>
@@ -166,7 +141,7 @@
                     </div>
                 </div>
     
-                <!-- Tarjeta 2 -->
+                
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 2">
                     <h2 class="text-center text-xl font-bold mt-4">Jesus Deza</h2>
@@ -183,7 +158,7 @@
                     </div>
                 </div>
     
-                <!-- Tarjeta 3 -->
+               
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 3">
                     <h2 class="text-center text-xl font-bold mt-4">Bryan Guzmán</h2>
@@ -200,7 +175,7 @@
                     </div>
                 </div>
     
-                <!-- Tarjeta 4 -->
+              
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 4">
                     <h2 class="text-center text-xl font-bold mt-4">Fernando Ramos</h2>
@@ -217,7 +192,7 @@
                     </div>
                 </div>
     
-                <!-- Tarjeta 5 -->
+                
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 5">
                     <h2 class="text-center text-xl font-bold mt-4">Diego Cokche</h2>
@@ -274,12 +249,12 @@
                 <!-- Sección del logo -->
                 
                 <div class="mb-6 md:mb-0 flex justify-center items-center md:justify-start">
-                   
+                    <img src="./images/logo/file2.png" alt="Logo Argus" class="h-20 w-24">
                 </div>
     
                 <!-- Sección de navegación -->
                 <div class="flex flex-col md:flex-row items-center md:space-x-8 mb-6 md:mb-0 text-center">
-                    <img src="./images/logo/file2.png" alt="Logo Argus" class="h-20 w-24">
+                    
                     <a href="#inicio" class="hover:text-gray-400 mb-2 md:mb-0">Inicio</a>
                     <a href="#servicios" class="hover:text-gray-400 mb-2 md:mb-0">Servicios</a>
                     <a href="#contacto" class="hover:text-gray-400 mb-2 md:mb-0">Contacto</a>
@@ -289,18 +264,32 @@
                 <!-- Sección de redes sociales -->
                 <div class="flex justify-center md:justify-end space-x-4">
                     <a href="#" aria-label="Facebook" class="hover:text-gray-400">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><!-- Facebook SVG --></svg>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- Facebook SVG -->
+                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.31h3.127V8.797c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.503 0-1.794.715-1.794 1.763v2.313h3.588l-.467 3.396h-3.121V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/>
+                        </svg>
                     </a>
                     <a href="#" aria-label="Twitter" class="hover:text-gray-400">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><!-- Twitter SVG --></svg>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- Twitter SVG -->
+                            <path d="M23.954 4.569c-.885.392-1.83.654-2.825.775a4.932 4.932 0 0 0 2.165-2.723 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.934 13.934 0 0 1 1.671 3.149a4.903 4.903 0 0 0 1.523 6.573 4.897 4.897 0 0 1-2.224-.616v.061a4.919 4.919 0 0 0 3.946 4.827 4.946 4.946 0 0 1-2.212.085 4.928 4.928 0 0 0 4.604 3.417A9.869 9.869 0 0 1 .983 19.54a13.897 13.897 0 0 0 7.548 2.212c9.058 0 14.01-7.512 14.01-14.01 0-.213-.004-.425-.015-.636a9.936 9.936 0 0 0 2.463-2.548l-.047-.02z"/>
+                        </svg>
                     </a>
                     <a href="#" aria-label="LinkedIn" class="hover:text-gray-400">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><!-- LinkedIn SVG --></svg>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- LinkedIn SVG -->
+                            <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.75V1.75C24 .78 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zm-1.78-13A2.06 2.06 0 0 1 3.3 5.39c0-1.14.91-2.05 2.05-2.05 1.13 0 2.05.92 2.05 2.05 0 1.13-.91 2.05-2.05 2.05h-.01zm14.11 13H17.1v-5.5c0-1.31-.03-3-1.83-3-1.83 0-2.11 1.42-2.11 2.89v5.61H9.6V9h3.42v1.56h.05c.48-.9 1.64-1.84 3.38-1.84 3.61 0 4.28 2.38 4.28 5.48v6.25z"/>
+                        </svg>
                     </a>
                     <a href="#" aria-label="Instagram" class="hover:text-gray-400">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><!-- Instagram SVG --></svg>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- Instagram SVG -->
+                            <path d="M12 2.16c3.2 0 3.584.012 4.847.07 1.17.054 1.82.24 2.24.4a4.572 4.572 0 0 1 1.662.967 4.576 4.576 0 0 1 .968 1.661c.16.42.345 1.07.4 2.24.058 1.263.07 1.647.07 4.847s-.012 3.584-.07 4.847c-.054 1.17-.24 1.82-.4 2.24a4.565 4.565 0 0 1-.968 1.662 4.575 4.575 0 0 1-1.661.968c-.42.16-1.07.345-2.24.4-1.263.058-1.647.07-4.847.07s-3.584-.012-4.847-.07c-1.17-.054-1.82-.24-2.24-.4a4.572 4.572 0 0 1-1.662-.968 4.572 4.572 0 0 1-.967-1.661c-.16-.42-.345-1.07-.4-2.24-.058-1.263-.07-1.647-.07-4.847s.012-3.584.07-4.847c.054-1.17.24-1.82.4-2.24a4.576 4.576 0 0 1 .967-1.661 4.573 4.573 0 0 1 1.662-.968c.42-.16 1.07-.345 2.24-.4 1.263-.058 1.647-.07 4.847-.07M12 0C8.736 0 8.332.012 7.052.07c-1.29.06-2.18.27-2.96.58a6.466 6.466 0 0 0-2.36 1.54A6.465 6.465 0 0 0 .686 4.51c-.31.78-.52 1.67-.58 2.96-.058 1.28-.07 1.684-.07 4.848s.012 3.568.07 4.848c.06 1.29.27 2.18.58 2.96a6.465 6.465 0 0 0 1.54 2.36 6.465 6.465 0 0 0 2.36 1.54c.78.31 1.67.52 2.96.58 1.28.058 1.684.07 4.848.07s3.568-.012 4.848-.07c1.29-.06 2.18-.27 2.96-.58a6.464 6.464 0 0 0 2.36-1.54 6.466 6.466 0 0 0 1.54-2.36c.31-.78.52-1.67.58-2.96.058-1.28.07-1.684.07-4.848s-.012-3.568-.07-4.848c-.06-1.29-.27-2.18-.58-2.96a6.468 6.468 0 0 0-1.54-2.36 6.468 6.468 0 0 0-2.36-1.54c-.78-.31-1.67-.52-2.96-.58-1.28-.058-1.684-.07-4.848-.07zM12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"/>
+                        </svg>
                     </a>
                 </div>
+                
+                
             </div>
     
             <!-- Sección de derechos reservados -->

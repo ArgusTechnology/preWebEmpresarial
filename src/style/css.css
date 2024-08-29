@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+body{
+    overflow-x: hidden;
+}
 
 /* Aquí se agregan clases personalizadas de Tailwind */
 .bg-opacity-0 {
@@ -104,37 +107,37 @@
     
 }
 
-/* Estilos para la descripción del carrusel */
+/* Estilos para la descripción del carrusel 
 .carousel-description {
     position: absolute;
-    top: 0; /* Empieza desde la parte superior */
-    left: 0; /* Empieza desde la parte izquierda */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100%; /* Ocupa toda la altura del contenedor */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor opacidad */
+    top: 0; /* Empieza desde la parte superior 
+    left: 0; /* Empieza desde la parte izquierda 
+    width: 100%; /* Ocupa todo el ancho del contenedor 
+    height: 100%; /* Ocupa toda la altura del contenedor 
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor opacidad 
     color: white;
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
-    display: flex; /* Usar flexbox para centrar la descripción */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+    display: flex; /* Usar flexbox para centrar la descripción 
+    align-items: center; /* Centrar verticalmente 
+    justify-content: center; /* Centrar horizontalmente 
     padding: 10px;
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento 
     transition: opacity 0.5s ease;
-    opacity: 0; /* Inicialmente invisible */
-    z-index: 10; /* Asegura que la descripción esté encima de la imagen */
+    opacity: 0; /* Inicialmente invisible 
+    z-index: 10; /* Asegura que la descripción esté encima de la imagen 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     
    
 }
-
-/* Mostrar la descripción al pasar el ratón */
+*/
+/* Mostrar la descripción al pasar el ratón 
 .swiper-slide:hover .carousel-description {
     opacity: 1;
 }
-
+*/
 /* Estilos generales de las secciones */
 section {
     padding: 2rem; /* Ajusta el padding aquí */
@@ -205,8 +208,19 @@ section + section {
 
 
 
+/* nuevo slider para la web */
 
+#background {
+    transition: opacity 1s ease-in-out;
+}
 
+.fade-out {
+    opacity: 0;
+}
 
+.fade-in {
+    opacity: 1;
+}
+  
 
 
