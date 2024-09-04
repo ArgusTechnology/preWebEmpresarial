@@ -148,8 +148,6 @@ function changeBackground() {
 // Set initial background
 backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
 
-// Change background image every 6 seconds
-
 
 // Change background image when a thumbnail is clicked
 thumbnails.forEach((thumbnail, index) => {

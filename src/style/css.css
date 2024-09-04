@@ -224,3 +224,24 @@ section + section {
   
 
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    #background,
+    #grid-images {
+        display: none;
+    }
+    .swiper-container {
+        display: block;
+    }
+}
+
+/* Estilos para pantallas más grandes (escritorio) */
+@media (min-width: 769px) {
+    #background,
+    #grid-images {
+        display: flex;
+    }
+    .swiper-container {
+        display: none;
+    }
+}
