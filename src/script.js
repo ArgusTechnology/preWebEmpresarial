@@ -24,46 +24,6 @@
 
         //animacion del titulo de section 2
 
-// Texto animado bajo el título "Proyectos Destacados"
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa Swiper solo para dispositivos móviles
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    // Función para ajustar la visibilidad según el tamaño de la pantalla
-    function adjustVisibility() {
-        const screenWidth = window.innerWidth;
-        const mobileBreakpoint = 768; // Define el punto de ruptura para móviles
-
-        if (screenWidth < mobileBreakpoint) {
-            // Móvil: Mostrar carrusel y ocultar diseño en cuadrícula
-            document.querySelector('.swiper-container').style.display = 'block';
-            document.getElementById('grid-images').style.display = 'none';
-        } else {
-            // Pantalla grande: Mostrar diseño en cuadrícula y ocultar carrusel
-            document.querySelector('.swiper-container').style.display = 'none';
-            document.getElementById('grid-images').style.display = 'flex';
-        }
-    }
-
-    // Ajusta la visibilidad al cargar la página
-    adjustVisibility();
-
-    // Ajusta la visibilidad al redimensionar la ventana
-    window.addEventListener('resize', adjustVisibility);
-
-});
 
         // Esperar a que el DOM esté completamente cargado
  // Seleccionar el botón "Ver Proyectos"
@@ -111,59 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-        
-
-//js del nuevo slider
-
-const images = [
-    "./images/projects/restaurantfoodfunday.png",
-    "./images/projects/cafebaristas.png",
-    "./images/projects/storeclothes.png",
-    "./images/projects/hotelnice.png",
-    "./images/projects/caferestaurant.png",
-    "./images/projects/cochetaller.png",
-    "./images/projects/kaffacoffegreen.png"
-
-];
-
-const backgroundDiv = document.getElementById('background');
-const thumbnails = document.querySelectorAll('.thumbnail');
-
-let currentIndex = 0;
-
-function changeBackground() {
-    backgroundDiv.classList.add('fade-out');
-    setTimeout(() => {
-        backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
-        console.log(backgroundDiv);
-        backgroundDiv.classList.remove('fade-out');
-        backgroundDiv.classList.add('fade-in');
-        currentIndex = (currentIndex + 1) % images.length;
-        setTimeout(() => {
-            backgroundDiv.classList.remove('fade-in');
-        }, 1000); // Match the duration with CSS transition
-    }, 1000); // Match the duration with CSS transition
-}
-
-// Set initial background
-backgroundDiv.style.backgroundImage = `url(${images[currentIndex]})`;
-
-
-// Change background image when a thumbnail is clicked
-thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        backgroundDiv.classList.add('fade-out');
-        setTimeout(() => {
-            backgroundDiv.style.backgroundImage = `url(${images[index]})`;
-            backgroundDiv.classList.remove('fade-out');
-            backgroundDiv.classList.add('fade-in');
-            currentIndex = index; // Update current index to match clicked thumbnail
-            setTimeout(() => {
-                backgroundDiv.classList.remove('fade-in');
-            }, 1000); // Match the duration with CSS transition
-        }, 1000); // Match the duration with CSS transition
-    });
-});
 
 
 

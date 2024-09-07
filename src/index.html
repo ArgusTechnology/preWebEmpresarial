@@ -13,11 +13,11 @@
 <body class="bg-gradient-to-tr from-slate-900 to-zinc-900 text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300 py-4">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300 py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img src="./images/logo/file2.png" alt="Logo" class="h-28 w-36"> <!-- Ajusta el tamaño del logo si es necesario -->
+                    <img src="./images/logo/file2.png" alt="Logo" class="h-24 w-36"> <!-- Ajusta el tamaño del logo si es necesario -->
                 </div>
                 <div class="hidden md:flex space-x-4">
                     <a href="#inicio" class="text-white hover:text-amber-300">Inicio</a>
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <section id="proyectos" class="relative h-screen flex flex-col items-center justify-center bg-gray-800">
+        <section id="proyectos" class="relative">
             
             <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
@@ -99,19 +99,23 @@
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="5"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="6"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="7"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="8"></button>
                 </div>
                 <!-- Slider controls -->
                 <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/80 dark:bg-gray-800/40 group-hover:bg-white/20 dark:group-hover:bg-gray-100/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-100/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-100 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
                         </svg>
                         <span class="sr-only">Previous</span>
                     </span>
                 </button>
                 <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/80 dark:bg-gray-800/40 group-hover:bg-white/20 dark:group-hover:bg-gray-100/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-100/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-100 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                         </svg>
                         <span class="sr-only">Next</span>
@@ -121,7 +125,7 @@
 
         </section>
         <!-- Sección de servicios -->
-        <section id="servicios" class="pb-24 pt-28 bg-gray-900">
+        <section id="servicios" class="pb-24 pt-24 bg-gray-900">
             <div class="max-w-7xl mx-auto px-6 pb-12 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-extrabold text-white border-b-4 border-teal-100 inline-block pb-2">Servicios Argus</h2>
