@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'https://unpkg.com/swiper/swiper-bundle.min.css';
+
 body{
     overflow-x: hidden;
 }
@@ -66,79 +66,13 @@ body{
 }
 
 
-/* CARRUSEL */
-
-/* Estilos para el carrusel */
-.swiper-slide {
-    display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    position: relative; /* Necesario para el posicionamiento de la descripción */
-    overflow: hidden; /* Asegura que nada se salga del contenedor */
-    width: 100%; /* Ajusta el ancho del swiper-slide al 100% */
-    height: 450px; /* Permite que la altura se ajuste automáticamente */
-    box-shadow: 12px 8px 0px rgba(49, 55, 82, 0.903), /* Sombra más difusa */
-    12px 8px 0px rgba(44, 67, 103, 0.936); /* Sombra más suave */
-    border-radius: 10px;
-    
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* La imagen se ajustará dentro del contenedor sin recortarse */
 }
 
-/* Estilos para el contenedor de la imagen */
-.swiper-slide > div {
-    position: relative;
-     /* Bordes redondeados más sutiles */
-    overflow: hidden; /* Asegura que el borde y la sombra no se salgan del contenedor */
-    width: 100%; /* Ajusta el ancho del contenedor al 100% del swiper-slide */
-    max-width: 100%; /* Ancho máximo del contenedor */
-    height: 100%; /* Altura del contenedor */
-    margin: auto; /* Centra horizontalmente el contenedor */
-    
-    
-    
-}
 
-/* Estilos para la imagen dentro del contenedor */
-.swiper-slide img {
-    display: block; /* Elimina el espacio debajo de la imagen */
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-     /* Asegura que la imagen se ajuste sin distorsionarse */
-    border-radius: 10px;
-    
-}
-
-/* Estilos para la descripción del carrusel 
-.carousel-description {
-    position: absolute;
-    top: 0; /* Empieza desde la parte superior 
-    left: 0; /* Empieza desde la parte izquierda 
-    width: 100%; /* Ocupa todo el ancho del contenedor 
-    height: 100%; /* Ocupa toda la altura del contenedor 
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor opacidad 
-    color: white;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-    display: flex; /* Usar flexbox para centrar la descripción 
-    align-items: center; /* Centrar verticalmente 
-    justify-content: center; /* Centrar horizontalmente 
-    padding: 10px;
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento 
-    transition: opacity 0.5s ease;
-    opacity: 0; /* Inicialmente invisible 
-    z-index: 10; /* Asegura que la descripción esté encima de la imagen 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    
-   
-}
-*/
-/* Mostrar la descripción al pasar el ratón 
-.swiper-slide:hover .carousel-description {
-    opacity: 1;
-}
-*/
-/* Estilos generales de las secciones */
 section {
     padding: 2rem; /* Ajusta el padding aquí */
 }
@@ -205,10 +139,6 @@ section + section {
 
 
 
-
-
-
-/* nuevo slider para la web */
 
 
 

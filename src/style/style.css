@@ -765,10 +765,6 @@ video {
   height: 100vh;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -1284,10 +1280,6 @@ video {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-96 {
-    height: 24rem;
   }
 
   .md\:grid-cols-2 {
