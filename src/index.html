@@ -13,11 +13,11 @@
 <body class="bg-gradient-to-tr from-slate-900 to-zinc-900 text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300 py-3">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-0 bg-opacity-0 backdrop-blur-lg shadow-lg transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img src="./images/logo/file2.png" alt="Logo" class="h-24 w-36"> <!-- Ajusta el tamaño del logo si es necesario -->
+                    <img src="./images/logo/file2.png" alt="Logo" class="h-20 w-36"> <!-- Ajusta el tamaño del logo si es necesario -->
                 </div>
                 <div class="hidden md:flex space-x-4">
                     <a href="#inicio" class="text-white hover:text-amber-300">Inicio</a>
@@ -57,38 +57,38 @@
             </div>
         </section>
 
-        <section id="proyectos" class="relative">
+        <section id="proyectos" class="w-screen">
             
             <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
-                <div class="relative h-full overflow-hidden rounded-lg md:h-full">
+                <div id="f" class="relative h-full w-full overflow-hidden rounded-lg md:h-full md:w-full">
                     <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./images/projects/cafebari.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="carousel-item hidden w-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/projects/cafebari.png" class=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./images/projects/caferestaurant.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/projects/caferestaurant.png" class="object-contain absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/hotelnice.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 4 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/kaffacoffegreen.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 5 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/cochetaller.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/storeclothes.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/restaurantfoodfunday.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="./images/projects/webpan.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                 </div>
@@ -134,32 +134,32 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Servicio 1 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Consultoría Tecnológica</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Consultoría Tecnológica</h3>
                         <p class="text-gray-600">Asesoramos a empresas en la selección e implementación de tecnologías avanzadas para optimizar sus operaciones.</p>
                     </div>
                     <!-- Servicio 2 -->
-                    <div class="bg-white shadow-md rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Software a Medida</h3>
+                    <div class="bg-white shadow-md rounded-lg p-6 ">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Desarrollo de Software a Medida</h3>
                         <p class="text-gray-600">Creamos soluciones de software personalizadas que garantizan funcionalidad, eficiencia y escalabilidad.</p>
                     </div>
                     <!-- Servicio 3 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de Páginas Web</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Desarrollo de Páginas Web</h3>
                         <p class="text-gray-600">Facilitamos la integración de plataformas y sistemas, mejorando la comunicación y el flujo de información.</p>
                     </div>
                     <!-- Servicio 4 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desarrollo de ERPs para empresas</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Desarrollo de ERPs para empresas</h3>
                         <p class="text-gray-600">Proveemos servicios de ciberseguridad avanzada para proteger la información crítica de tu empresa.</p>
                     </div>
                     <!-- Servicio 5 -->
-                    <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="bg-white shadow-md rounded-lg p-6 text-center">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Consultoría de Proyectos Tecnológicos</h3>
                         <p class="text-gray-600">Analizamos y gestionamos tus proyectos tecnológicos para garantizar el éxito en cada etapa del desarrollo.</p>
                     </div>
                     <!-- Servicio 6 -->
                     <div class="bg-white shadow-md rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Implementación de Soluciones Cloud</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Implementación de Soluciones Cloud</h3>
                         <p class="text-gray-600">Ofrecemos migración y administración de servicios en la nube para mejorar la eficiencia y escalabilidad de tu empresa.</p>
                     </div>
                 </div>
@@ -170,14 +170,14 @@
             <div class="text-center mb-8">
                 <h1 class="text-4xl font-extrabold text-white border-b-4 border-teal-100 inline-block pb-2">EQUIPO ARGUS</h1>
             </div>
-            <div class="mb-12 max-w-5xl mx-auto text-center text-gray-300">
+            <div class="mb-12 max-w-5xl mx-auto text-center text-gray-200">
                 <p>En ARGUS, nos dedicamos a desarrollar soluciones tecnológicas innovadoras que transforman la forma en que las empresas operan en el entorno digital. Nuestro equipo multidisciplinario combina experiencia técnica con creatividad para brindar productos y servicios que exceden las expectativas de nuestros clientes. Valoramos la innovación, la calidad y el trabajo en equipo, y creemos que juntos podemos hacer grandes cosas.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                 
                 <div class="card bg-gray-800 rounded-lg p-5">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre CEO">
-                    <h2 class="text-center text-xl font-bold mt-4">Marco Hinostroza</h2>
+                    <h2 class="text-center text-xl font-bold mt-4 text-amber-500">Marco Hinostroza</h2>
                     <p class="text-center text-lg font-semibold text-gray-400">CEO & CTO</p>
                     <p class="text-justify mt-4">Como CEO y CTO de Argus, lidero la estrategia y la innovación en el desarrollo de páginas web y soluciones ERP. Me especializo en transformar ideas en tecnologías web efectivas y en asegurar el mantenimiento continuo para el éxito y crecimiento de nuestros proyectos.
 
@@ -195,7 +195,7 @@
                 
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 2">
-                    <h2 class="text-center text-xl font-bold mt-4">Jesus Deza</h2>
+                    <h2 class="text-center text-xl font-bold mt-4 text-amber-500">Jesus Deza</h2>
                     <p class="text-center text-lg font-semibold text-gray-400">CMO & CDO</p>
                     <p class="text-justify mt-4">Jesús Deza, CMO y CDO de Argus, lidera las estrategias de marketing y el diseño creativo de la empresa. Con una visión innovadora, se especializa en desarrollar campañas que conectan con nuestro público y en crear diseños impactantes que refuerzan nuestra identidad de marca.
                     </p>
@@ -212,7 +212,7 @@
                
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 3">
-                    <h2 class="text-center text-xl font-bold mt-4">Bryan Guzmán</h2>
+                    <h2 class="text-center text-xl font-bold mt-4 text-amber-500">Bryan Guzmán</h2>
                     <p class="text-center text-lg font-semibold text-gray-400">CTO</p>
                     <p class="text-justify mt-4">Soy Bryan Guzmán, CTO Adjunto en Argus. Me encargo de asegurar el funcionamiento del sistema y equipo informático. Lidero el desarrollo de proyectos tecnológicos y superviso la infraestructura para garantizar el rendimiento óptimo de nuestras soluciones.
                     </p>
@@ -229,7 +229,7 @@
               
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 4">
-                    <h2 class="text-center text-xl font-bold mt-4">Fernando Ramos</h2>
+                    <h2 class="text-center text-xl font-bold mt-4 text-amber-500">Fernando Ramos</h2>
                     <p class="text-center text-lg font-semibold text-gray-400">CLO & CFO</p>
                     <p class="text-justify mt-4">Soy Fernando Ramos, CLO y CFO en Argus. Me encargo de gestionar todos los aspectos legales y financieros de la empresa. Aseguro el cumplimiento de las normativas, manejo las políticas internas y superviso la administración y contabilidad para apoyar el crecimiento y la estabilidad de la empresa.
                     </p>
@@ -246,7 +246,7 @@
                 
                 <div class="card bg-gray-800 rounded-lg p-6">
                     <img class="w-44 h-56 mx-auto rounded-3xl" src="./images/fotomarco-removebg-preview.png" alt="Nombre Integrante 5">
-                    <h2 class="text-center text-xl font-bold mt-4">Diego Cokche</h2>
+                    <h2 class="text-center text-xl font-bold mt-4 text-amber-500">Diego Cokche</h2>
                     <p class="text-center text-lg font-semibold text-gray-400">CCO & HR Manager</p>
                     <p class="text-justify mt-4"> Soy Diego Cokche, CCO y HR Manager en Argus. Me encargo de gestionar la atención al cliente, garantizando una experiencia excepcional y resolviendo cualquier inquietud. Además, manejo aspectos relacionados con recursos humanos, apoyando el desarrollo y bienestar del equipo.
                     </p>

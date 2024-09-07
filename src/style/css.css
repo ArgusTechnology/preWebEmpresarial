@@ -4,16 +4,53 @@ body{
     overflow-x: hidden;
 }
 
+/* Aplicar a todo el sitio web */
+html {
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #888 #f1f1f1; /* thumb color y track color */
+  }
+  
+  /* Scrollbar para navegadores WebKit */
+  ::-webkit-scrollbar {
+    width: 12px; /* Anchura del scrollbar */
+  }
+  
+  /* Track del scrollbar (el fondo) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del track */
+    border-radius: 10px; /* Bordes redondeados del track */
+  }
+  
+  /* Handle del scrollbar (la barra que se mueve) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la barra */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #f1f1f1; /* Hace la barra más gruesa */
+  }
+  
+  /* Handle del scrollbar al hacer hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cambia el color al pasar el mouse */
+  }
+  
+
 /* Aquí se agregan clases personalizadas de Tailwind */
 .bg-opacity-0 {
     background-color: rgba(159, 154, 154, 0.186);
 }
 .parallax-bg {
-    background-image: url("../images/imagen1.jpeg"); /* Cambia la URL a tu imagen */
+    background-image: url("../images/imagen1.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+    .parallax-bg {
+         /* Cambiar de fixed a scroll en móviles */
+        background-position: center top; /* Ajustar la posición del fondo */
+    }
 }
 
 #navbar{
@@ -77,17 +114,49 @@ section {
     padding: 2rem; /* Ajusta el padding aquí */
 }
 
-#proyectos{
-    height: 100vh;
-}
+
+
+
+#proyectos {
+    position: relative;
+    
+    height: 850px; /* Mínimo 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .carousel-item{
+    width: 100%;
+  }
+  
+  .carousel-item img{
+    
+  height: 100%;
+  object-fit:fill; /* Asegura que la imagen cubra todo el contenedor */
+  
+  }
+
+  
+  /* Estilos para pantallas pequeñas */
+
+  @media (max-width: 768px) {
+    #proyectos {
+    
+      height: 100svi; /* Altura automática en pantallas pequeñas */
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #proyectos {
+        
+      height: 100vi; /* Altura del 80% de la pantalla en tablets */
+    }
+  }
 
 section + section {
     margin-top: 2rem; /* Espaciado entre secciones */
 }
 
-.swiper-pagination-bullet {
-    background-color: #fae5e1; /* Cambia este color por el que desees */
-  }
 
   
 
