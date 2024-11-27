@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preWeb": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/style.css --watch"
+    "preWeb": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/style.css --watch",
+    "start": "npx serve src"
   },
   "keywords": [],
   "author": "",
